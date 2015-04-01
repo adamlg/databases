@@ -41,10 +41,10 @@ $(function() {
 
       // POST the message to the server
       $.ajax({
-        url: app.server,
+        url: app.server + 'classes/messages',
         type: 'POST',
-        json: data,
-        // data: JSON.stringify(data),
+        // json: data,
+        data: JSON.stringify(data),
         contentType: 'application/json',
         success: function (data) {
           console.log('chatterbox: Message sent' + data);
